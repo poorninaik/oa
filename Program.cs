@@ -6,7 +6,9 @@ namespace oa
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int[] nums = { 3, 2, 2, 4 };
+            int target = 6;
+            Console.WriteLine(TwoSum(nums, target));
         }
     }
 }
