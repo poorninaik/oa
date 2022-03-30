@@ -1,4 +1,6 @@
 ﻿using System;
+using oa.Arrays;
+using oa.Strings;
 
 namespace oa
 {
@@ -6,9 +8,9 @@ namespace oa
     {
         static void Main(string[] args)
         {
-            int[] nums = { 3, 2, 2, 4 };
+            int[] nums = { 23, 2, 4, 6, 7 };
             int target = 6;
-            Console.WriteLine(TwoSum(nums, target));
+            Console.WriteLine(SubArraySum.CheckSubarraySum(nums, target));
         }
     }
 }
