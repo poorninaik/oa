@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace oa.Heaps
 {
     public class MedianFinder
-    {/*
+    {
         readonly PriorityQueue<int, int> maxHeap = new PriorityQueue<int, int>();
         readonly PriorityQueue<int, int> minHeap = new PriorityQueue<int, int>();
         public MedianFinder()
@@ -30,7 +30,7 @@ namespace oa.Heaps
                 return _maxHeap[count / 2];
             else
                 return (_maxHeap[count / 2] + _maxHeap[count / 2 - 1]) / 2;
-        }*/
+        }
     }
 
     /**
