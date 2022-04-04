@@ -16,7 +16,7 @@ namespace oa.Strings
             if (A.Length == 1) return 0;
             foreach (char c in A.ToCharArray())
             {
-                if (c == ')' || c == '}' || c == '}')
+                if (c == ')' || c == '}' || c == ']')
                 {
                     if (stack.Count == 0 || (stack.Peek() != '(' && c == ')')
                         || (stack.Peek() != '{' && c == '}')
