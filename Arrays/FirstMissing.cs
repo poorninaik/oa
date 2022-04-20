@@ -6,26 +6,33 @@ using System.Threading.Tasks;
 
 namespace oa.Arrays
 {
-    class FirstMissing
+    static class FirstMissing
     {
-        public static int Positive(int[] nums)
+        private static int Positive(int[] nums)
         {
-            int n = nums.Length;
-            for (int i = 0; i < n; i++)
-            {
+            var n = nums.Length;
+            for (var i = 0; i < n; i++)
                 while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] != nums[i])
-                {
-                    int next = nums[nums[i] - 1];
-                    nums[nums[i] - 1] = nums[i];
-                    nums[i] = next;
-                }
-            }
-            for (int i = 0; i < n; i++)
+                    (nums[nums[i] - 1], nums[i]) = (nums[i], nums[nums[i] - 1]);
+                
+            for (var i = 0; i < n; i++)
             {
                 if (nums[i] != (i + 1))
                     return i + 1;
             }
             return n + 1;
+        }
+        private static void Main(string[] args)
+        {
+            Console.WriteLine(Positive(new int[]{}));
+
+            Console.WriteLine(Positive(new int[]{
+                1,2,8,3,5,7,9, 10
+            }));
+
+            Console.WriteLine(Positive(new int[]{
+                8, 10
+            }));
         }
     }
 }
